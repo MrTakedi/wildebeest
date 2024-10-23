@@ -2,5 +2,3 @@ compatibility_date = "2023-01-09"
 main = "./src/index.ts"
 usage_model = "unbound"
 node_compat = true
-
-account_id = "4fcde8c2eec955606a424036be89b32e"
