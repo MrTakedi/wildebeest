@@ -19,8 +19,6 @@ jobs:
       NO_D1_WARNING: true
       CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
-      CF_DEPLOY_DOMAIN: 'bpd.zone'
-      CF_ZONE_ID: 'b0a56081dd0e14627a5b2bf4b65e4d3a'
     steps:
       - name: Ensure CF_DEPLOY_DOMAIN and CF_ZONE_ID are defined
         run: |
