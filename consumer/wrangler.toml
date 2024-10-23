@@ -4,7 +4,3 @@ usage_model = "unbound"
 node_compat = true
 
 account_id = "4fcde8c2eec955606a424036be89b32e"
-[[d1_databases]]
-binding = "DATABASE"
-database_name = "wildebeest-mrtakedi-v1"
-database_id = "6dc96652-0ec7-48fd-a67e-61436e88b440" 
