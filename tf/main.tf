@@ -154,7 +154,7 @@ resource "cloudflare_record" "record" {
 resource "cloudflare_pages_domain" "domain" {
   account_id   = var.cloudflare_account_id
   project_name = "wildebeest-${lower(var.name_suffix)}"
-  domain       = trimspace(var.cloudflare_deploy_domain)
+  domain       = "${trimspace(var.cloudflare_deploy_domain)}"
 
   depends_on = [
     cloudflare_pages_project.wildebeest_pages_project,
