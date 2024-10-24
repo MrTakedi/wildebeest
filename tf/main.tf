@@ -102,7 +102,7 @@ resource "cloudflare_pages_project" "wildebeest_pages_project" {
   account_id = var.cloudflare_account_id
   name              = "wildebeest-${lower(var.name_suffix)}"
   production_branch = "main"
-
+  project_id = "111f54b1-9150-421a-a02b-54ee653c6400"
   deployment_configs {
     production {
       environment_variables = {
