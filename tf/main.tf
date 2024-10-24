@@ -144,7 +144,7 @@ resource "cloudflare_pages_project" "wildebeest_pages_project" {
 
 resource "cloudflare_record" "record" {
   zone_id = trimspace(var.cloudflare_zone_id)
-  name    = trimspace(var.cloudflare_deploy_domain)
+  name    = "bpd.zone"
   value   = cloudflare_pages_project.wildebeest_pages_project.subdomain
   type    = "CNAME"
   ttl     = 1
