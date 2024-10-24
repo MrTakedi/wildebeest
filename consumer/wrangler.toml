@@ -2,6 +2,7 @@ compatibility_date = "2023-01-09"
 main = "./src/index.ts"
 usage_model = "unbound"
 node_compat = true
+name = "wildebeest-mrtakedi"
 
 [[d1_databases]]
 binding = "DATABASE"
