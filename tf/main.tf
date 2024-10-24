@@ -142,14 +142,15 @@ resource "cloudflare_pages_project" "wildebeest_pages_project" {
   }
 }
 
-resource "cloudflare_record" "record" {
-  zone_id = trimspace(var.cloudflare_zone_id)
-  name    = "bpd.zone"
-  value   = cloudflare_pages_project.wildebeest_pages_project.subdomain
-  type    = "CNAME"
-  ttl     = 1
-  proxied = true
-}
+// Comment out the following block if the DNS record already exists and was imported.
+# resource "cloudflare_record" "record" {
+#   zone_id = trimspace(var.cloudflare_zone_id)
+#   name    = "bpd.zone"
+#   value   = cloudflare_pages_project.wildebeest_pages_project.subdomain
+#   type    = "CNAME"
+#   ttl     = 1
+#   proxied = true
+# }
 
 resource "cloudflare_pages_domain" "domain" {
   account_id   = var.cloudflare_account_id
@@ -158,7 +159,7 @@ resource "cloudflare_pages_domain" "domain" {
 
   depends_on = [
     cloudflare_pages_project.wildebeest_pages_project,
-    cloudflare_record.record,
+    # cloudflare_record.record,   # Only if you're managing the DNS record through Terraform.
   ]
 }
 
